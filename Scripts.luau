@@ -518,6 +518,6 @@ for i, Button in ipairs(DifficultyButtons) do
         end
     end)
 end
----END OF ButtonInputScript---
+---END OF MainQuizScript---
  
 -- END --
