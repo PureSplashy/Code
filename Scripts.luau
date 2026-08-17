@@ -1,3 +1,4 @@
+-- Made by @PureSplashy (Roblox, Discord)
 -- Game Link : https://www.roblox.com/games/131234930559351/Math-Quiz
 -- Youtube Game Review : https://www.youtube.com/watch?v=-lvnR9igbFY&ab_channel=PureSplashy
 
