@@ -40,7 +40,7 @@ local Speaker = Screen.Speaker
  
 --- --- --- --- --- --- --- --- --- ---
  
-local function StartButton(Player, Button)
+local function StartButton(Player, Button) -- start quiz button handler
     
     if Player.Name == ConfigFolder.InteractingPlayer.Value then
         Speaker.Press:Play()
@@ -56,7 +56,7 @@ local function StartButton(Player, Button)
     
 end
  
-local function EndRound(Player)
+local function EndRound(Player) -- ends quiz
     if ConfigFolder.QuizRunning.Value == true then
         ConfigFolder.QuizRunning.Value = false
         
@@ -74,7 +74,7 @@ local function EndRound(Player)
  
         ResultsScreenFolder.ResultText.Text = "SCORE : " .. ConfigFolder.QuestionNumber.Value
  
-        if ConfigFolder.QuestionNumber.Value <= 3 then
+        if ConfigFolder.QuestionNumber.Value <= 3 then -- picks your appropriate rating (realizes there's a better way to make this with tables but it already works*)
             ResultsScreenFolder.Rating.Text = "WORSE"
             Speaker.Bad:Play()
         elseif ConfigFolder.QuestionNumber.Value <= 5 then
@@ -149,7 +149,7 @@ local function EndRound(Player)
     
 end
  
-local function PromptQuestion(Player)
+local function PromptQuestion(Player) -- prompts a question
     
     if Player.Name == ConfigFolder.InteractingPlayer.Value then
         
@@ -232,7 +232,7 @@ local function PromptQuestion(Player)
     
 end
  
-local function StartRound(Player, ButtonName)
+local function StartRound(Player, ButtonName) -- starts round
     
     if Player.Name == ConfigFolder.InteractingPlayer.Value then
         
@@ -301,7 +301,7 @@ local function StartRound(Player, ButtonName)
     
 end
  
-local function CheckAnswer(Player, Text)
+local function CheckAnswer(Player, Text) -- checks answer
     
     if Player.Name == ConfigFolder.InteractingPlayer.Value then
         
@@ -327,7 +327,7 @@ local function CheckAnswer(Player, Text)
     
 end
  
-local function Input(Player, Input)
+local function Input(Player, Input) -- handles player input
     
     if Player.Name == ConfigFolder.InteractingPlayer.Value and ConfigFolder.PauseTimer.Value == false then
         
@@ -357,7 +357,7 @@ local function Input(Player, Input)
     
 end
  
-ConfigFolder.Timer.Changed:Connect(function()
+ConfigFolder.Timer.Changed:Connect(function() -- ends round when timer hits 0
     if ConfigFolder.Timer.Value <= 0 and Seat.Occupant and Seat.Occupant.Parent and ConfigFolder.QuizRunning.Value == true then
  
         local Player = game.Players:GetPlayerFromCharacter(Seat.Occupant.Parent)
