@@ -1,8 +1,5 @@
 -- Game Link : https://www.roblox.com/games/131234930559351/Math-Quiz
--- Youtube Video : https://www.youtube.com/watch?v=-lvnR9igbFY&ab_channel=PureSplashy
- 
--- WHAT IS SHOWN HERE: 4 Scripts: 2 Server, 2 Client. (Essential scripts)
--- WHAT IS NOT SHOWN HERE: Very small or unnecessary scripts like Fireworks/Daycycle
+-- Youtube Game Review : https://www.youtube.com/watch?v=-lvnR9igbFY&ab_channel=PureSplashy
 
 -- All SFX/SoundTracks made by me except firework SFX
  
@@ -377,5 +374,3 @@ DifficultyEvent.OnServerEvent:Connect(StartRound)
 UpdateAnswerBoxEvent.OnServerEvent:Connect(Input)
 EndRoundBindable.Event:Connect(EndRound)
 ---END OF MainQuizScript---
- 
--- END --
